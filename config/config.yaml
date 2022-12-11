@@ -1,0 +1,116 @@
+# Path related
+dataset_path: data/raw/breast-cancer-wisconsin.csv
+dataset_cleaned_path: data/processed/breast_cancer_clean_dataset.pkl
+traintest_set_path:
+- data/processed/x_train.pkl
+- data/processed/y_train.pkl
+- data/processed/x_test.pkl
+- data/processed/y_test.pkl
+traintest_clean_set_path:
+- data/processed/x_train_clean.pkl
+- data/processed/y_train_clean.pkl
+- data/processed/x_test_clean.pkl
+- data/processed/y_test.pkl
+production_model_path: models/production_model.pkl
+training_log_path: log/training_log.json
+
+#all column names
+column_name:
+- Sample_code_number
+- Clump_thickness 
+- Uniformity_of_cell_size 
+- Uniformity_of_cell_shape
+- Marginal_adhesion
+- Single_epithelial_cell_size
+- Bare_nuclei
+- Bland_chromatin 
+- Normal_nucleoli
+- Mitoses
+- Class
+
+#column used
+used_columns:
+- Clump_thickness 
+- Uniformity_of_cell_size 
+- Uniformity_of_cell_shape
+- Marginal_adhesion
+- Single_epithelial_cell_size
+- Bare_nuclei
+- Bland_chromatin 
+- Normal_nucleoli
+- Mitoses
+- Class
+
+# Debug related
+print_debug: true
+
+# Predictor Columns by data type related
+int_columns:
+- Clump_thickness 
+- Uniformity_of_cell_size 
+- Uniformity_of_cell_shape
+- Marginal_adhesion
+- Single_epithelial_cell_size
+- Bare_nuclei
+- Bland_chromatin 
+- Normal_nucleoli
+- Mitoses
+
+# Predictors and label related
+label: Class
+predictors:
+- Clump_thickness 
+- Uniformity_of_cell_size 
+- Uniformity_of_cell_shape
+- Marginal_adhesion
+- Single_epithelial_cell_size
+- Bare_nuclei
+- Bland_chromatin 
+- Normal_nucleoli
+- Mitoses
+
+# Range of data related
+Clump_thickness: 
+- 1
+- 10
+Uniformity_of_cell_size: 
+- 1
+- 10
+Uniformity_of_cell_shape:
+- 1
+- 10
+Marginal_adhesion:
+- 1
+- 10
+Single_epithelial_cell_size:
+- 1
+- 10
+Bare_nuclei:
+- 1
+- 10
+Bland_chromatin :
+- 1
+- 10
+Normal_nucleoli:
+- 1
+- 10
+Mitoses:
+- 1
+- 10
+Class:
+- 2
+- 4
+
+#imputer
+imputer: models/imputer.pkl
+
+#standardizer
+standardizer: models/standardizer.pkl
+
+estimator:
+- knn
+- logreg
+- svm
+- rf
+
+header_image: assets/header.jfif
